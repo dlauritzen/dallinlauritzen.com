@@ -1,4 +1,6 @@
 
+sensitive.json
+/tmp/
 /static/
 
 *.pyc

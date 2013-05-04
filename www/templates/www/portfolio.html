@@ -1,6 +1,5 @@
 {% extends "www/base.html" %}
 {% load utils %}
-{% load url from future %}
 
 {% block title %}Portfolio{% endblock %}
 
@@ -8,7 +7,7 @@
 <header class="row">
   <div class="span12">
     <h1 class="page-header">
-      <a href="{% url "www.home" %}">Dallin Lauritzen</a>
+      <a href="{% url www.home %}">Dallin Lauritzen</a>
       <small>Technical Resume</small>
     </h1>
   </div>

@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls.defaults import *
 
 urlpatterns = patterns('www.views',
     url(r'^$', 'home.index', name='www.home'),

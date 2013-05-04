@@ -1,13 +1,12 @@
 {% extends "www/base.html" %}
 {% load utils %}
-{% load url from future %}
 {% block title %}Contact Me{% endblock %}
 
 {% block content %}
 <header class="row">
   <div class="span12">
     <h1 class="page-header">
-      <a href="{% url "www.home" %}">Dallin Lauritzen</a>
+      <a href="{% url www.home %}">Dallin Lauritzen</a>
       <small>Contact Me</small>
     </h1>
   </div>
@@ -34,7 +33,7 @@
     </p>
   </div>
   <div class="span6">
-    <form class="form" method="POST" action="{% url "www.contact" %}">
+    <form class="form" method="POST" action="{% url www.contact %}">
     {% csrf_token %}
     <div>
       <input type="text" class="input span6" placeholder="Your Name" name="name" />

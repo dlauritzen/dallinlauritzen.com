@@ -1,0 +1,15 @@
+{% extends "www/base.html" %}
+
+{% block title %}404 Not Found{% endblock %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="span12">
+      <h1 class="page-header">Page Not Found <small>{{ request_path }}</small></h1>
+      <p>We couldn't find the page you requested. If you followed a link to get here, please let us
+      know so we can fix it. Please use the links at the bottom of this page to navigate.</p>
+    </div>
+  </div>
+
+{% endblock %}
