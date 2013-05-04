@@ -1,0 +1,56 @@
+{% extends "www/base.html" %}
+
+{% load utils %}
+
+{% block title %}About DallinLauritzen.com{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="span12">
+    <h1 class="page-header">
+      <a href="{% url "www.home" %}">Dallin Lauritzen</a>
+      <small>About Me</small>
+    </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="span4">
+    <img class="thumbnail" src="{{ STATIC_URL }}images/www/dallin-profile.jpg" />
+  </div>
+  <div class="span8">
+    <h5>Essentials</h5>
+    <p>
+    Hey! I'm Dallin Lauritzen, a desktop and mobile software developer
+    who loves writing tools that help people get stuff done. I recently
+    graduated from Brigham Young University with a Bachelor's in Computer
+    Science and I'm now one of the developers of
+    <a href="http://www.parentlink.net/">ParentLink</a>.
+    </p>
+
+    <h5>History</h5>
+    <p>
+    I started building websites when my high school taught basic
+    HTML as part of its required computer curriculum. After my Dreamweaver
+    trial expired I began shopping around and eventually decided to try
+    writing my own. My oldest brother pointed me at Java and I taught
+    myself programming over the next three years. I entered BYU and finally
+    got a formal education. I learned C/C++, Python, and a ton about what
+    computers are capable of. In the summer of 2012 I started working
+    part-time on ParentLink's iOS app. Once I graduated in April 2013 I
+    joined the development team full-time.
+    </p>
+
+    <h5>More</h5>
+    <p>
+    You can keep up with my life and projects by following my blog or social
+    networks. Links are below, in order of relevance.
+    </p>
+    <ul class="unstyled inline">
+      <li><a href="http://alpha.app.net/dlauritzen">App.net</a></li>
+      <li><a href="https://github.com/dlauritzen">GitHub</a></li>
+      <li><a href="http://blog.dallinlauritzen.com/">Blog</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+

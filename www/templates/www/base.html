@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load url from future %}
+
+{% block body %}
+
+<section class="container" role="main" id="main" ng-controller="controllers.www">
+  {% block content %}{% endblock %}
+</section>
+
+<footer class="container footer">
+  <div class="row"><div class="span12"><hr /></div></div>
+  <div class="row">
+    <div class="span6 left">
+      <ul class="unstyled inline">
+	<li><a href="{% url "www.home" %}">Home</a></li>
+	<li><a href="{% url "www.adjutor" %}">Adjutor</a></li>
+	<li><a href="{% url "www.about" %}">About</a></li>
+	<li><a href="{% url "www.portfolio" %}">Portfolio</a></li>
+	<li><a href="{% url "www.contact" %}">Contact</a></li>
+      </ul>
+    </div>
+    <div class="span6 right">
+      Site Copyright &copy; 2013 Dallin Lauritzen
+    </div>
+  </div>
+</footer>
+
+{% endblock %}
+

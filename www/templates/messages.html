@@ -1,0 +1,11 @@
+{% if messages %}
+<section class="container">
+{% for message in messages %}
+  <div class="row">
+    <div class="span8 offset2 alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+      {{ message }}
+    </div>
+  </div>
+{% endfor %}
+</section>
+{% endif %}

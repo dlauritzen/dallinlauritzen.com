@@ -1,0 +1,91 @@
+{% extends "www/base.html" %}
+{% load utils %}
+{% load url from future %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+<header class="row">
+  <div class="span12">
+    <h1 class="page-header">
+      <a href="{% url "www.home" %}">Dallin Lauritzen</a>
+      <small>Technical Resume</small>
+    </h1>
+  </div>
+</header>
+
+<section class="row">
+  <div class="span12">
+
+    <h3>Education</h3>
+    <ul class="unstyled">
+      <li><strong>Bachelor of Science</strong>, Computer Science</li>
+      <li>Brigham Young University. Provo, UT, April 2013</li>
+      <li><em>Courses Include</em>: Parallel Processing, Internet
+    Programming, Security, User Interface Design, Computer Graphics,
+    and Operating Systems.</li>
+    </ul>
+
+    <h3>Computer Skills</h3>
+    <ul class="unstyled">
+      <li><strong>Languages</strong>: C, C++, Objective-C, Java,
+      Python, C#, HTML, CSS, XML, MySQL, PHP, JavaScript.</li>
+      <li><strong>Frameworks &amp; Libraries</strong>: Cocoa, CUDA,
+      OpenGL, OpenMP, MPI, PThreads, Django, jQuery.</li>
+      <li><strong>Software</strong>: Xcode, GNU Emacs, Eclipse,
+      Netbeans, Git, CVS, SVN.</li>
+      <li><strong>Operating Systems</strong>: iOS, Linux, Mac OS X, Windows.</li>
+    </ul>
+
+    <h3>Professional Experience</h3>
+
+    <h5>Software Developer <small>&ndash; Parlant Technology, Inc. &ndash; May 2013 - Present</small></h5>
+    <ul>
+      <li>Expaneded responsibilities from iOS mobile app to database backend and website interface.</li>
+    </ul>
+    
+    <h5>Junior Developer <small>&ndash; Parlant Technology,
+    Inc. &ndash; Aug 2012 - Apr 2013</small></h5>
+    <ul>
+      <li>Created internal Python scripts and website to manage
+      compilation of more than 30 iOS and Android mobile apps.</li>
+      <li>Continued to work on the ParentLink iOS development
+      team.</li>
+      <li>Added new features and views to the ParentLink iOS mobile
+      app, including social media sharing and a custom calendar entry
+      detail view.</li>
+      <li>Hired full-time upon graduation.</li>
+    </ul>
+    <h5>Developer Intern <small>&ndash; Parlant Technology, Inc. &ndash; Summer 2012</small></h5>
+    <ul>
+      <li>Worked on the ParentLink iOS development team.</li>
+      <li>Assisted in the creation of the ParentLink mobile community app.</li>
+      <li>Promoted to Junior Developer at the end of the summer.</li>
+    </ul>
+    <h5>Developer <small>&ndash; CleanBrain Software, Inc. &ndash; Summer 2011</small></h5>
+    <ul>
+      <li>Worked on a team of eight developers creating CleanTelligent Janitorial Software.</li>
+      <li>Managed and improved a database-driven JSP website of almost 700,000 LOC.</li>
+    </ul>
+
+    <h3>Awards, Recognition, &amp; Activities</h3>
+    <ul class="unstyled">
+      <li>6th in Desktop Applications Programming at Future Business Leaders of America (FBLA) National Leadership Conference, Summer 2008.</li>
+      <li>Eagle Scout Award, 2005.</li>
+      <li>Missionary for the Church of Jesus Christ of Latter-day Saints, 2009-2010.</li>
+    </ul>
+
+    <h3>More Information</h3>
+    <ul class="unstyled">
+      <ul class="unstyled">
+	<li><strong>LinkedIn</strong>: {% url_link "http://www.linkedin.com/in/dallinlauritzen" %}</li>
+	<li><strong>ParentLink</strong>: {% url_link "http://www.parentlink.net" %}</li>
+	<li><strong>CleanTelligent</strong>: {% url_link "http://www.cleantelligent.com" %}</li>
+      </ul>
+    </ul>
+    
+  </div>
+</section>
+
+{% endblock %}
+

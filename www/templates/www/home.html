@@ -1,0 +1,34 @@
+{% extends "www/base.html" %}
+
+{% block title %}DallinLauritzen.com{% endblock %}
+
+{% block content %}
+<header class="row">
+  <div class="span12">
+    <h1 class="page-header">
+      Dallin Lauritzen 
+      <small>Desktop and Mobile Software Developer</small>
+    </h1>
+  </div>
+</header>
+
+{% include "messages.html" %}
+
+<section class="row">
+  <div class="span12">
+    <p>
+    Hi, and welcome to my website. I spent a while trying to figure out
+    how to lay out this page and finally settled on the simple approach.
+    </p>
+    <p>
+    I make computer stuff. This website will have links to all my projects,
+    social profiles, and resume. Check the
+    <a href="{% url "www.about" %}">About</a> and
+    <a href="{% url "www.portfolio" %}">Portfolio</a> pages for more information
+    about me.
+    </p>
+  </div>
+</section>
+
+{% endblock %}
+

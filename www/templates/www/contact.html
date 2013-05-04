@@ -1,0 +1,55 @@
+{% extends "www/base.html" %}
+{% load utils %}
+{% load url from future %}
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+<header class="row">
+  <div class="span12">
+    <h1 class="page-header">
+      <a href="{% url "www.home" %}">Dallin Lauritzen</a>
+      <small>Contact Me</small>
+    </h1>
+  </div>
+</header>
+
+{% include "messages.html" %}
+
+<section class="row">
+  <div class="span6">
+    <h5>Why to reach me</h5>
+    <p>
+    If you like what you see here or in my projects and want me to build something for <strong>you</strong>, let me know.
+    I don't plan on having a lot of time, but I will listen to all proposals. Even if I don't have time I might be able
+    to point you at someone I know that <strong>can</strong> help you out.
+    </p>
+    
+    <h5>How to reach me</h5>
+    <p>
+    The best way to reach me is via email. You can reach me at {% email_link "dallin@dallinlauritzen.com" %} or by filling
+    out the old-timey form on this page.
+    </p>
+    <p>
+    If you have an <a class="noline" href="http://join.app.net/">App.net</a> account, message me <a class="noline" href="http://alpha.app.net/dlauritzen">@dlauritzen</a> and we can chat there!
+    </p>
+  </div>
+  <div class="span6">
+    <form class="form" method="POST" action="{% url "www.contact" %}">
+    {% csrf_token %}
+    <div>
+      <input type="text" class="input span6" placeholder="Your Name" name="name" />
+      <br />
+      <input type="email" class="input span6" placeholder="Your Email, so I can write back" name="email" />
+      <br />
+      <input type="text" class="input span6" placeholder="A captivating subject to get my attention" name="subject" />
+    </div>
+    <div>
+      <textarea class="input span6" placeholder="Your Message" rows="5" name="message"></textarea>
+    </div>
+    <input type="submit" class="btn btn-primary btn-block" value="Send" />
+    </form>
+  </div>
+</section>
+
+{% endblock %}
+
